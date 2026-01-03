@@ -48,8 +48,14 @@ const goToProfile = () => {
   router.push('/profile')
 }
 
-const createGame = () => {
-  console.log('Create game')
+const createGame = async () => {
+  try {
+    const response = await api.post('/api/games', {})
+    const gameId = response.data.id
+    router.push(`/games/${gameId}`)
+  } catch (error) {
+    console.error('Erreur lors de la création de la partie:', error)
+  }
 }
 
 const goToJoin = () => {
