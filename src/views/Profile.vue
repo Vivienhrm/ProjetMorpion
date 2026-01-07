@@ -12,17 +12,17 @@
       </div>
       <button type="submit">Enregistrer</button>
     </form>
-    <div v-if="errors.length > 0" class="errors">
-      <p v-for="error in errors" :key="error">{{ error }}</p>
-    </div>
+    <ErrorAlert :errors="errors" />
     <button @click="goBack">Retour à l'accueil</button>
   </div>
 </template>
 
 <script>
 import api from '@/api'
+import ErrorAlert from '@/errors/ErrorAlert.vue'
 
 export default {
+  components: { ErrorAlert },
   data() {
     return {
       user: null,
@@ -99,10 +99,5 @@ button {
 
 button:hover {
   background-color: #0056b3;
-}
-
-.errors {
-  color: red;
-  margin-bottom: 10px;
 }
 </style>

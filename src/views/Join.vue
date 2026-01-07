@@ -6,15 +6,17 @@
       <input id="code" v-model="code" placeholder="Entrez le code" />
       <button type="submit" :disabled="loading">Rejoindre</button>
     </form>
-    <p v-if="error" class="error">{{ error }}</p>
+    <ErrorAlert :errors="error" />
   </div>
 </template>
 
 <script>
 import api from '@/api'
+import ErrorAlert from '@/errors/ErrorAlert.vue'
 
 export default {
   name: 'JoinView',
+  components: { ErrorAlert },
   data() {
     return {
       code: '',
@@ -50,7 +52,6 @@ export default {
 </script>
 
 <style scoped>
-.error { color: red; margin-top: 10px }
 input { display:block; margin:8px 0; padding:6px }
 button { padding:6px 10px }
 </style>
