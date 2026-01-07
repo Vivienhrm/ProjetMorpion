@@ -61,16 +61,30 @@ export default {
 
 <style scoped>
 .profile {
-  max-width: 400px;
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 2rem;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 1.5rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 1.5rem;
 }
 
 div {
@@ -79,25 +93,44 @@ div {
 }
 
 label {
-  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+  text-align: left;
+  margin-bottom: 0.5rem;
 }
 
 input {
-  padding: 8px;
-  font-size: 16px;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box; 
+}
+
+input:focus {
+  border-color: #0277bd;
+  outline: none;
 }
 
 button {
-  padding: 10px;
-  font-size: 16px;
-  background-color: #007bff;
+  background: #0277bd;
   color: white;
   border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
   cursor: pointer;
-  margin-top: 10px;
+  transition: background 0.3s, transform 0.1s;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background: #1565C0;
+}
+
+button:active {
+  transform: scale(0.98);
 }
 </style>

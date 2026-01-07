@@ -334,12 +334,12 @@ export default {
 }
 
 .btn-return {
-  background: #28a745;
+  background: #0277bd;
   margin-top: 1rem;
 }
 
 .btn-return:hover {
-  background: #218838;
+  background: #1565C0;
 }
 
 @keyframes fadeIn {
